@@ -3,4 +3,4 @@ project(vect)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(vect main.cpp vec.h nvec.h)
+add_executable(vect main.cpp vec.h nvec.h range.h const.h mx.h functors.h)
