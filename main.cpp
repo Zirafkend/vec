@@ -1,86 +1,50 @@
 #include <iostream>
 #include <vector>
-#include "vec.h"
-#include "nvec.h"
 #include "range.h"
-
+#include "nvec.h"
+#include "container_stream.h"
+#include "rect.h"
 
 using namespace std;
 
 
-template <class T>
-class Helper {
-private:
-    T obj_;
-
-public:
-    explicit Helper<T>( T obj ) : obj_(obj) {}
-
-public:
-    T getObj() const { return obj_; }
-    void setObj( T obj ) { obj_ = obj; }
-
-    template<class U>
-    inline friend std::ostream& operator<< ( std::ostream& out, const Helper<U>& rhs );
-};
 
 
-
-
-// TODO forward declarator
-/*
-template<typename T>
-struct foo{
-    using vec = typename  std::valarray < T >;
-    using range = typename  std::valarray < T >;
-
-};
+vector<recti> a{
+    {0, 0, 15, 63},
+    {11, 0, 12, 43},
+    {18, 0, 15, 63},
+    {28, 0, 12, 43},
+    {36, 0, 15, 63},
+    {54, 0, 15, 63},
+    {64, 0, 12, 43},
+    {72, 0, 15, 63},
+    {82, 0, 12, 43},
+    {90, 0, 15, 63},
+    {100, 0, 12, 43},
+    {108, 0, 15, 63}};
 
 
 
-template<class T> using vec = typename foo<T>::vec;
-template<class T> using range = typename foo<T>::vec;
-*/
-
-
-
-
-
-
-using namespace range;
 
 int main() {
 
-    vecf a      { 0.0, 1.0 };
-
-    //rect c(0,0, 100, 100);
 
 
+//    nvecd b = polygon(10);
+//
+//
+//    //linei a{{0, 1, 1, 0}};
+//
+//    cout << midpoint({0, 1}, {1,0}) << endl;
+//
+//
 
-    return 0;
-}
 
 
-/*
- *     vecf b { 1.0, 0.0 };
-
-
-    //vecf c = theta<float>(90.0_deg); // -4.37114e-08 1
-
-    float theta = anglebetween(a, b);
-
-    distance(a);
-    delta(a,b);
-
-    rectf r;
-
-    //vecf b = theta(0.3);
-
- */
-float anglebetween(vecf valarray, vecf valarray1) {
+    cout << printrect(a[0]) << endl;
 
     return 0;
 }
-
 
 

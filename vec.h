@@ -22,14 +22,6 @@ typedef vec<int>            veci;
 
 
 
-template <typename T> std::ostream& operator<< (std::ostream& os, vec<T> ve) {
-    os << "vector2d : {" << ve[0] << "," << ve[1] << "}";
-    return os;
-}
-
-
-
-
 #if defined(__AVR_ATmega328P__) || defined(__AVR_ATmega168__)
 typedef vec<byte>   vecb;
 #endif
